@@ -1,0 +1,50 @@
+:root {
+  --navBgc: hsla(10, 10%, 10%, 0.5);
+  --black: #141414;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(assets/bg.jpg);
+  background-size: 100vw 100vh;
+}
+
+nav {
+  width: 100vw;
+  height: 4rem;
+
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--black);
+}
+
+nav .logo {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  /* font-weight: 100; */
+}
+
+nav .info {
+  display: flex;
+  gap: 32px;
+}
+
+nav .info li {
+  list-style: none;
+}
+
+nav .info li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.15rem;
+}
