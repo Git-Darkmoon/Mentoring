@@ -1,0 +1,81 @@
+/*
+    :pseudoClassName
+
+    :first-child ==> Points to the first child of the parent class.
+    :nth-child() ==> Points to the specified child of the parent class.
+    :hover ==> Literally is hovering on an element.
+    :active ==> ONLY when the click is active.
+    :focus ==> Focus the element and if you click other element the style will be lost.
+    :visited ==> Handles the color of a visited link.
+    :disabled ==> Applies styles to the elements that have the disabled attribute.
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* property name | duration | easing function | delay */
+  --bgTransition: background-color 0.75s ease-in-out;
+  --transition: all 0.2s ease-in-out;
+}
+
+body {
+  background-color: #141221;
+}
+
+header {
+  margin-block: 4rem;
+}
+
+header input {
+  background-color: hsl(248, 29%, 40%);
+}
+
+header input:disabled {
+  cursor: not-allowed;
+  background-color: hsl(0, 29%, 30%);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.container .card {
+  width: 100%;
+  background: #eee;
+
+  transition: var(--transition);
+}
+
+/* .card:first-child {
+  background-color: rgb(67, 158, 47);
+} */
+
+/* .card:nth-child(-2n + 3) {
+  background-color: hsl(248, 29%, 40%);
+} */
+
+.card:nth-child(6):hover {
+  cursor: pointer;
+  background-color: goldenrod;
+}
+
+.card:nth-child(7):active {
+  background-color: #d3d;
+  scale: 1.2;
+}
+.card:nth-child(8):focus {
+  border: 7px solid gold;
+}
+
+.card > a:visited {
+  color: #d3d;
+}

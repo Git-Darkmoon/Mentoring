@@ -1,0 +1,105 @@
+/*
+    PseudoElements: 
+    ::before ::after pseudo-elements creates element and inserts 
+    before and after CONTENT
+    content: '' - require
+
+    NO FUNCIONAN PARA LAS IMAGENES !!!
+
+*/
+
+:root {
+  --primary-1: hsl(300, 8%, 7%);
+  --primary-2: hsl(300, 8%, 12%);
+  --primary-3: hsl(300, 8%, 16%);
+  --transition: all 0.45s linear;
+  --translationNum: 3.125rem;
+  --translationNumMinus: -3.125rem;
+
+  --bdrRadius: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+position: relative;
+*/
+
+body {
+  background-color: var(--primary-1);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 50rem;
+  transition: var(--transition);
+  opacity: 0.5;
+
+  position: relative;
+}
+
+.wrapper img {
+  width: 100%;
+  border-radius: var(--bdrRadius);
+}
+
+.wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--primary-2); */
+  background-image: url(../images/animals.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  top: var(--translationNum);
+  left: var(--translationNum);
+  z-index: -1;
+
+  opacity: 0.25;
+  border-radius: var(--bdrRadius);
+
+  transition: var(--transition);
+}
+.wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--primary-3); */
+  background-image: url(../images/animals.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  top: var(--translationNumMinus);
+  left: var(--translationNumMinus);
+  z-index: -2;
+
+  opacity: 0.25;
+  border-radius: var(--bdrRadius);
+
+  transition: var(--transition);
+}
+
+.wrapper:hover::before,
+.wrapper:hover::after {
+  top: 0;
+  left: 0;
+}
+
+.wrapper:hover {
+  opacity: 1;
+}
