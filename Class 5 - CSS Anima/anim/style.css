@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #141112;
+  --secondary: hsl(255, 30%, 38%);
+  --trans: all 0.3s ease-out;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 14rem;
+  height: 14rem;
+  background-color: var(--secondary);
+
+  transition: var(--trans);
+  animation: rainbow 10s infinite ease-out;
+
+  background-size: 100%;
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  75% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sizeChange {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: Red;
+    border-radius: 0%;
+    width: 100%;
+  }
+  14.3% {
+    background-color: orange;
+    border-radius: 100%;
+    width: 150%;
+  }
+  28.6% {
+    background-color: yellow;
+    border-radius: 0%;
+    width: 180%;
+  }
+  42.9% {
+    background-color: green;
+    border-radius: 100%;
+    width: 200%;
+  }
+  57.2% {
+    background-color: blue;
+    border-radius: 0%;
+    width: 180%;
+  }
+  71.5% {
+    background-color: indigo;
+    border-radius: 100%;
+    width: 150%;
+  }
+  85.8% {
+    background-color: violet;
+    border-radius: 0%;
+    width: 100%;
+  }
+  100% {
+    background-color: red;
+  }
+}

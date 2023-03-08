@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav_x: 100vw;
+  --nav_y: 5rem;
+}
+
+.navbar {
+  width: var(--nav_x);
+  height: var(--nav_y);
+  background-color: #eee;
+
+  display: flex;
+  font-family: sans-serif;
+}
+
+.navbar .logo {
+  display: none;
+  color: #eee;
+  width: 75%;
+}
+
+.navbar ul {
+  display: flex;
+  width: var(--nav_x);
+  height: var(--nav_y);
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #141213;
+  font-size: 1.15rem;
+  transition: all 0.3s ease-out;
+}
+
+.navbar li a:hover {
+  color: goldenrod;
+  font-size: 1.25rem;
+}
+body {
+  background-color: #141213;
+}
+
+/* estilos >= 700 */
+
+@media (min-width: 32rem) {
+  body {
+    background-color: orangered;
+  }
+}
+
+@media (min-width: 48rem) {
+  body {
+    background-color: orange;
+  }
+
+  .navbar {
+    background-color: #141213;
+  }
+
+  .navbar li a {
+    color: #eee;
+  }
+}
+
+@media (min-width: 64rem) {
+  body {
+    background-color: yellow;
+  }
+
+  .navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
