@@ -17,10 +17,22 @@ let names = ["A", "B", "C"]
 names.map(() => {})
 
 /*
-    - array.map()
-    - array.filter()
-    - array.forEach()
-    - array.every()
-    - array.some()
-    - array.reduce()
+    - array.map() ==> Retorna array
+    - array.filter() ==> Retorna array
+    - array.forEach() ==> NO retorna array
+    - array.every() ==> NO retorna array, retorna boolean
+    - array.some() ==> NO retorna array, retorna boolean
+    - array.reduce() ==> 
+          array.reduce((accVariable, iteratorVariable) => {
+
+        },initialValueAcc)
+*/
+
+/* 
+TAREA ==>  BEM | Block Element Modifier
+
+    container_card__active {
+
+    }
+
 */
