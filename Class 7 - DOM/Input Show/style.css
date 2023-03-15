@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cascadia Code";
+}
+
+:root {
+  --basePadding: 1rem;
+}
+
+body {
+  background-color: #141321;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input[type="text"] {
+  padding: var(--basePadding);
+  font-size: 1.35rem;
+}
+
+.container .btn {
+  padding: var(--basePadding);
+  font-size: 1.35rem;
+}
+
+.container div > h2 {
+  color: #eee;
+  padding: var(--basePadding);
+}
