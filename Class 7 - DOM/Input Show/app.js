@@ -6,7 +6,7 @@ BOM - Browser Object Model
 /*
 dom selectors performance hierarchy:
 
-querySelector  => CSS Selectors  
+querySelector ==> CSS Selectors  
 ClassName
 ById
 
