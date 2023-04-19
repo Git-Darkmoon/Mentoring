@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-lightMode: #f8f8de;
+  --clr-darkMode: #212121;
+  --clr-primary: var(--clr-darkMode);
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  background-color: var(--clr-lightMode);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in;
+}
+
+.btn {
+  margin-block: 1rem;
+  padding: 0.65rem 0.45rem;
+  font-size: 1.75rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0.3rem;
+  border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+p {
+  width: 50%;
+  color: var(--clr-primary);
+}
+
+.dark_mode {
+  background-color: var(--clr-darkMode);
+  --clr-primary: var(--clr-lightMode);
+}
